@@ -1,0 +1,115 @@
+DEBUG:root:Cluster name : global.mapr.com
+INFO:maprdb.connection:Starting JVM
+DEBUG:maprdb.utils:com.mapr.db.exceptions.DBException: Failed to create table: /twittercloud/tweets, Error: No such file or directory (2)
+	at com.mapr.db.exceptions.ExceptionHandler.handle(ExceptionHandler.java:63)
+	at com.mapr.db.impl.AdminImplHelper._createTable(AdminImplHelper.java:117)
+	at com.mapr.db.impl.AdminImpl.createTable(AdminImpl.java:147)
+	at com.mapr.db.impl.MapRDBImpl.createTable(MapRDBImpl.java:76)
+	at com.mapr.db.MapRDB.createTable(MapRDB.java:62)
+Caused by: com.mapr.fs.jni.IOExceptionWithErrorCode: Failed to create table: /twittercloud/tweets, Error: No such file or directory (2)
+	at com.mapr.fs.MapRFileSystem.createTable(MapRFileSystem.java:3556)
+	at com.mapr.db.impl.AdminImplHelper._createTable(AdminImplHelper.java:90)
+	... 3 more
+
+DEBUG:root:Cluster name : global.mapr.com
+DEBUG:root:Cluster name : global.mapr.com
+DEBUG:root:Cluster name : global.mapr.com
+INFO:maprdb.connection:Starting JVM
+DEBUG:requests_oauthlib.oauth1_auth:Signing request <PreparedRequest [POST]> using client <Client callback_uri=None, resource_owner_key=229849013-kyAkPe0d26SADOegxdb9JgyeKLAkC4fK16ESrMJK, timestamp=None, nonce=None, signature_type=AUTH_HEADER, signature_method=HMAC-SHA1, client_key=xHuVf9fBEjb1Bu4B8NkiMCUEM, decoding=None, client_secret=****, resource_owner_secret=****, rsa_key=None, verifier=None, encoding=utf-8, realm=None>
+DEBUG:requests_oauthlib.oauth1_auth:Including body in call to sign: True
+DEBUG:oauthlib.oauth1.rfc5849:Collected params: [('delimited', 'length'), ('oauth_token', '229849013-kyAkPe0d26SADOegxdb9JgyeKLAkC4fK16ESrMJK'), ('oauth_signature_method', 'HMAC-SHA1'), ('oauth_nonce', '43157420835141002241520352965'), ('oauth_timestamp', '1520352965'), ('oauth_version', '1.0'), ('oauth_consumer_key', 'xHuVf9fBEjb1Bu4B8NkiMCUEM'), ('track', 'cloud')]
+DEBUG:oauthlib.oauth1.rfc5849:Normalized params: delimited=length&oauth_consumer_key=xHuVf9fBEjb1Bu4B8NkiMCUEM&oauth_nonce=43157420835141002241520352965&oauth_signature_method=HMAC-SHA1&oauth_timestamp=1520352965&oauth_token=229849013-kyAkPe0d26SADOegxdb9JgyeKLAkC4fK16ESrMJK&oauth_version=1.0&track=cloud
+DEBUG:oauthlib.oauth1.rfc5849:Normalized URI: https://stream.twitter.com/1.1/statuses/filter.json
+DEBUG:oauthlib.oauth1.rfc5849:Signing: signature base string: POST&https%3A%2F%2Fstream.twitter.com%2F1.1%2Fstatuses%2Ffilter.json&delimited%3Dlength%26oauth_consumer_key%3DxHuVf9fBEjb1Bu4B8NkiMCUEM%26oauth_nonce%3D43157420835141002241520352965%26oauth_signature_method%3DHMAC-SHA1%26oauth_timestamp%3D1520352965%26oauth_token%3D229849013-kyAkPe0d26SADOegxdb9JgyeKLAkC4fK16ESrMJK%26oauth_version%3D1.0%26track%3Dcloud
+DEBUG:oauthlib.oauth1.rfc5849:Signature: sHGP7gfhD7PkmakFdLA7gmGFPYs=
+DEBUG:requests_oauthlib.oauth1_auth:Updated url: https://stream.twitter.com/1.1/statuses/filter.json?delimited=length
+DEBUG:requests_oauthlib.oauth1_auth:Updated headers: {'Authorization': 'OAuth oauth_nonce="43157420835141002241520352965", oauth_timestamp="1520352965", oauth_version="1.0", oauth_signature_method="HMAC-SHA1", oauth_consumer_key="xHuVf9fBEjb1Bu4B8NkiMCUEM", oauth_token="229849013-kyAkPe0d26SADOegxdb9JgyeKLAkC4fK16ESrMJK", oauth_signature="sHGP7gfhD7PkmakFdLA7gmGFPYs%3D"', 'Content-Length': '11', 'Content-Type': 'application/x-www-form-urlencoded'}
+DEBUG:requests_oauthlib.oauth1_auth:Updated body: 'track=cloud'
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): stream.twitter.com
+DEBUG:urllib3.connectionpool:https://stream.twitter.com:443 "POST /1.1/statuses/filter.json?delimited=length HTTP/1.1" 200 None
+DEBUG:root:Cluster name : global.mapr.com
+INFO:maprdb.connection:Starting JVM
+DEBUG:requests_oauthlib.oauth1_auth:Signing request <PreparedRequest [POST]> using client <Client client_secret=****, resource_owner_secret=****, verifier=None, client_key=xHuVf9fBEjb1Bu4B8NkiMCUEM, callback_uri=None, decoding=None, realm=None, resource_owner_key=229849013-kyAkPe0d26SADOegxdb9JgyeKLAkC4fK16ESrMJK, signature_method=HMAC-SHA1, timestamp=None, nonce=None, signature_type=AUTH_HEADER, encoding=utf-8, rsa_key=None>
+DEBUG:requests_oauthlib.oauth1_auth:Including body in call to sign: True
+DEBUG:oauthlib.oauth1.rfc5849:Collected params: [('delimited', 'length'), ('oauth_version', '1.0'), ('oauth_token', '229849013-kyAkPe0d26SADOegxdb9JgyeKLAkC4fK16ESrMJK'), ('oauth_consumer_key', 'xHuVf9fBEjb1Bu4B8NkiMCUEM'), ('oauth_signature_method', 'HMAC-SHA1'), ('oauth_nonce', '134111058001844023731520352977'), ('oauth_timestamp', '1520352977'), ('track', 'cloud')]
+DEBUG:oauthlib.oauth1.rfc5849:Normalized params: delimited=length&oauth_consumer_key=xHuVf9fBEjb1Bu4B8NkiMCUEM&oauth_nonce=134111058001844023731520352977&oauth_signature_method=HMAC-SHA1&oauth_timestamp=1520352977&oauth_token=229849013-kyAkPe0d26SADOegxdb9JgyeKLAkC4fK16ESrMJK&oauth_version=1.0&track=cloud
+DEBUG:oauthlib.oauth1.rfc5849:Normalized URI: https://stream.twitter.com/1.1/statuses/filter.json
+DEBUG:oauthlib.oauth1.rfc5849:Signing: signature base string: POST&https%3A%2F%2Fstream.twitter.com%2F1.1%2Fstatuses%2Ffilter.json&delimited%3Dlength%26oauth_consumer_key%3DxHuVf9fBEjb1Bu4B8NkiMCUEM%26oauth_nonce%3D134111058001844023731520352977%26oauth_signature_method%3DHMAC-SHA1%26oauth_timestamp%3D1520352977%26oauth_token%3D229849013-kyAkPe0d26SADOegxdb9JgyeKLAkC4fK16ESrMJK%26oauth_version%3D1.0%26track%3Dcloud
+DEBUG:oauthlib.oauth1.rfc5849:Signature: 7Qa71r4dD3fCGPmhxb4o/1CPfr4=
+DEBUG:requests_oauthlib.oauth1_auth:Updated url: https://stream.twitter.com/1.1/statuses/filter.json?delimited=length
+DEBUG:requests_oauthlib.oauth1_auth:Updated headers: {'Content-Type': 'application/x-www-form-urlencoded', 'Authorization': 'OAuth oauth_nonce="134111058001844023731520352977", oauth_timestamp="1520352977", oauth_version="1.0", oauth_signature_method="HMAC-SHA1", oauth_consumer_key="xHuVf9fBEjb1Bu4B8NkiMCUEM", oauth_token="229849013-kyAkPe0d26SADOegxdb9JgyeKLAkC4fK16ESrMJK", oauth_signature="7Qa71r4dD3fCGPmhxb4o%2F1CPfr4%3D"', 'Content-Length': '11'}
+DEBUG:requests_oauthlib.oauth1_auth:Updated body: 'track=cloud'
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): stream.twitter.com
+DEBUG:urllib3.connectionpool:https://stream.twitter.com:443 "POST /1.1/statuses/filter.json?delimited=length HTTP/1.1" 200 None
+DEBUG:maprdb.utils:org.ojai.exceptions.TypeException: Only BINARY AND STRING types are currently support for '_id' field.
+	at com.mapr.db.rowcol.DBDocumentImpl.setId(DBDocumentImpl.java:1590)
+	at com.mapr.db.rowcol.DBDocumentImpl.setId(DBDocumentImpl.java:1572)
+	at com.mapr.db.rowcol.DBDocumentImpl.createOrInsert(DBDocumentImpl.java:221)
+	at com.mapr.db.rowcol.DBDocumentImpl.setCommon(DBDocumentImpl.java:337)
+	at com.mapr.db.rowcol.DBDocumentImpl.set(DBDocumentImpl.java:404)
+	at com.mapr.db.rowcol.DBDocumentImpl.set(DBDocumentImpl.java:48)
+
+DEBUG:root:Cluster name : global.mapr.com
+INFO:maprdb.connection:Starting JVM
+DEBUG:requests_oauthlib.oauth1_auth:Signing request <PreparedRequest [POST]> using client <Client signature_type=AUTH_HEADER, realm=None, client_secret=****, timestamp=None, callback_uri=None, nonce=None, decoding=None, verifier=None, signature_method=HMAC-SHA1, rsa_key=None, encoding=utf-8, resource_owner_key=229849013-kyAkPe0d26SADOegxdb9JgyeKLAkC4fK16ESrMJK, client_key=xHuVf9fBEjb1Bu4B8NkiMCUEM, resource_owner_secret=****>
+DEBUG:requests_oauthlib.oauth1_auth:Including body in call to sign: True
+DEBUG:oauthlib.oauth1.rfc5849:Collected params: [('delimited', 'length'), ('oauth_timestamp', '1520352996'), ('oauth_version', '1.0'), ('oauth_consumer_key', 'xHuVf9fBEjb1Bu4B8NkiMCUEM'), ('oauth_nonce', '32751742394694320861520352996'), ('oauth_token', '229849013-kyAkPe0d26SADOegxdb9JgyeKLAkC4fK16ESrMJK'), ('oauth_signature_method', 'HMAC-SHA1'), ('track', 'cloud')]
+DEBUG:oauthlib.oauth1.rfc5849:Normalized params: delimited=length&oauth_consumer_key=xHuVf9fBEjb1Bu4B8NkiMCUEM&oauth_nonce=32751742394694320861520352996&oauth_signature_method=HMAC-SHA1&oauth_timestamp=1520352996&oauth_token=229849013-kyAkPe0d26SADOegxdb9JgyeKLAkC4fK16ESrMJK&oauth_version=1.0&track=cloud
+DEBUG:oauthlib.oauth1.rfc5849:Normalized URI: https://stream.twitter.com/1.1/statuses/filter.json
+DEBUG:oauthlib.oauth1.rfc5849:Signing: signature base string: POST&https%3A%2F%2Fstream.twitter.com%2F1.1%2Fstatuses%2Ffilter.json&delimited%3Dlength%26oauth_consumer_key%3DxHuVf9fBEjb1Bu4B8NkiMCUEM%26oauth_nonce%3D32751742394694320861520352996%26oauth_signature_method%3DHMAC-SHA1%26oauth_timestamp%3D1520352996%26oauth_token%3D229849013-kyAkPe0d26SADOegxdb9JgyeKLAkC4fK16ESrMJK%26oauth_version%3D1.0%26track%3Dcloud
+DEBUG:oauthlib.oauth1.rfc5849:Signature: b83yUnl+b7IYkk+kgM/QOjmrW68=
+DEBUG:requests_oauthlib.oauth1_auth:Updated url: https://stream.twitter.com/1.1/statuses/filter.json?delimited=length
+DEBUG:requests_oauthlib.oauth1_auth:Updated headers: {'Content-Type': 'application/x-www-form-urlencoded', 'Content-Length': '11', 'Authorization': 'OAuth oauth_nonce="32751742394694320861520352996", oauth_timestamp="1520352996", oauth_version="1.0", oauth_signature_method="HMAC-SHA1", oauth_consumer_key="xHuVf9fBEjb1Bu4B8NkiMCUEM", oauth_token="229849013-kyAkPe0d26SADOegxdb9JgyeKLAkC4fK16ESrMJK", oauth_signature="b83yUnl%2Bb7IYkk%2BkgM%2FQOjmrW68%3D"'}
+DEBUG:requests_oauthlib.oauth1_auth:Updated body: 'track=cloud'
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): stream.twitter.com
+DEBUG:urllib3.connectionpool:https://stream.twitter.com:443 "POST /1.1/statuses/filter.json?delimited=length HTTP/1.1" 200 None
+DEBUG:maprdb.utils:org.ojai.exceptions.TypeException: Only BINARY AND STRING types are currently support for '_id' field.
+	at com.mapr.db.rowcol.DBDocumentImpl.setId(DBDocumentImpl.java:1590)
+	at com.mapr.db.rowcol.DBDocumentImpl.setId(DBDocumentImpl.java:1572)
+	at com.mapr.db.rowcol.DBDocumentImpl.createOrInsert(DBDocumentImpl.java:221)
+	at com.mapr.db.rowcol.DBDocumentImpl.setCommon(DBDocumentImpl.java:337)
+	at com.mapr.db.rowcol.DBDocumentImpl.set(DBDocumentImpl.java:404)
+	at com.mapr.db.rowcol.DBDocumentImpl.set(DBDocumentImpl.java:48)
+
+DEBUG:root:Cluster name : global.mapr.com
+INFO:maprdb.connection:Starting JVM
+DEBUG:requests_oauthlib.oauth1_auth:Signing request <PreparedRequest [POST]> using client <Client client_secret=****, rsa_key=None, decoding=None, nonce=None, callback_uri=None, timestamp=None, resource_owner_secret=****, signature_type=AUTH_HEADER, realm=None, resource_owner_key=229849013-kyAkPe0d26SADOegxdb9JgyeKLAkC4fK16ESrMJK, signature_method=HMAC-SHA1, verifier=None, client_key=xHuVf9fBEjb1Bu4B8NkiMCUEM, encoding=utf-8>
+DEBUG:requests_oauthlib.oauth1_auth:Including body in call to sign: True
+DEBUG:oauthlib.oauth1.rfc5849:Collected params: [('delimited', 'length'), ('oauth_signature_method', 'HMAC-SHA1'), ('oauth_token', '229849013-kyAkPe0d26SADOegxdb9JgyeKLAkC4fK16ESrMJK'), ('oauth_nonce', '63196139435303986431520353101'), ('oauth_timestamp', '1520353101'), ('oauth_consumer_key', 'xHuVf9fBEjb1Bu4B8NkiMCUEM'), ('oauth_version', '1.0'), ('track', 'cloud')]
+DEBUG:oauthlib.oauth1.rfc5849:Normalized params: delimited=length&oauth_consumer_key=xHuVf9fBEjb1Bu4B8NkiMCUEM&oauth_nonce=63196139435303986431520353101&oauth_signature_method=HMAC-SHA1&oauth_timestamp=1520353101&oauth_token=229849013-kyAkPe0d26SADOegxdb9JgyeKLAkC4fK16ESrMJK&oauth_version=1.0&track=cloud
+DEBUG:oauthlib.oauth1.rfc5849:Normalized URI: https://stream.twitter.com/1.1/statuses/filter.json
+DEBUG:oauthlib.oauth1.rfc5849:Signing: signature base string: POST&https%3A%2F%2Fstream.twitter.com%2F1.1%2Fstatuses%2Ffilter.json&delimited%3Dlength%26oauth_consumer_key%3DxHuVf9fBEjb1Bu4B8NkiMCUEM%26oauth_nonce%3D63196139435303986431520353101%26oauth_signature_method%3DHMAC-SHA1%26oauth_timestamp%3D1520353101%26oauth_token%3D229849013-kyAkPe0d26SADOegxdb9JgyeKLAkC4fK16ESrMJK%26oauth_version%3D1.0%26track%3Dcloud
+DEBUG:oauthlib.oauth1.rfc5849:Signature: j8phrHf4ifj+mRrvzLtQ9jQ8XC4=
+DEBUG:requests_oauthlib.oauth1_auth:Updated url: https://stream.twitter.com/1.1/statuses/filter.json?delimited=length
+DEBUG:requests_oauthlib.oauth1_auth:Updated headers: {'Content-Type': 'application/x-www-form-urlencoded', 'Content-Length': '11', 'Authorization': 'OAuth oauth_nonce="63196139435303986431520353101", oauth_timestamp="1520353101", oauth_version="1.0", oauth_signature_method="HMAC-SHA1", oauth_consumer_key="xHuVf9fBEjb1Bu4B8NkiMCUEM", oauth_token="229849013-kyAkPe0d26SADOegxdb9JgyeKLAkC4fK16ESrMJK", oauth_signature="j8phrHf4ifj%2BmRrvzLtQ9jQ8XC4%3D"'}
+DEBUG:requests_oauthlib.oauth1_auth:Updated body: 'track=cloud'
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): stream.twitter.com
+DEBUG:urllib3.connectionpool:https://stream.twitter.com:443 "POST /1.1/statuses/filter.json?delimited=length HTTP/1.1" 200 None
+DEBUG:root:Cluster name : global.mapr.com
+INFO:maprdb.connection:Starting JVM
+DEBUG:requests_oauthlib.oauth1_auth:Signing request <PreparedRequest [POST]> using client <Client signature_method=HMAC-SHA1, callback_uri=None, timestamp=None, nonce=None, encoding=utf-8, verifier=None, client_secret=****, resource_owner_secret=****, rsa_key=None, decoding=None, client_key=xHuVf9fBEjb1Bu4B8NkiMCUEM, resource_owner_key=229849013-kyAkPe0d26SADOegxdb9JgyeKLAkC4fK16ESrMJK, signature_type=AUTH_HEADER, realm=None>
+DEBUG:requests_oauthlib.oauth1_auth:Including body in call to sign: True
+DEBUG:oauthlib.oauth1.rfc5849:Collected params: [('delimited', 'length'), ('oauth_nonce', '68554105759321997921520353145'), ('oauth_token', '229849013-kyAkPe0d26SADOegxdb9JgyeKLAkC4fK16ESrMJK'), ('oauth_version', '1.0'), ('oauth_timestamp', '1520353145'), ('oauth_signature_method', 'HMAC-SHA1'), ('oauth_consumer_key', 'xHuVf9fBEjb1Bu4B8NkiMCUEM'), ('track', 'kubernetes')]
+DEBUG:oauthlib.oauth1.rfc5849:Normalized params: delimited=length&oauth_consumer_key=xHuVf9fBEjb1Bu4B8NkiMCUEM&oauth_nonce=68554105759321997921520353145&oauth_signature_method=HMAC-SHA1&oauth_timestamp=1520353145&oauth_token=229849013-kyAkPe0d26SADOegxdb9JgyeKLAkC4fK16ESrMJK&oauth_version=1.0&track=kubernetes
+DEBUG:oauthlib.oauth1.rfc5849:Normalized URI: https://stream.twitter.com/1.1/statuses/filter.json
+DEBUG:oauthlib.oauth1.rfc5849:Signing: signature base string: POST&https%3A%2F%2Fstream.twitter.com%2F1.1%2Fstatuses%2Ffilter.json&delimited%3Dlength%26oauth_consumer_key%3DxHuVf9fBEjb1Bu4B8NkiMCUEM%26oauth_nonce%3D68554105759321997921520353145%26oauth_signature_method%3DHMAC-SHA1%26oauth_timestamp%3D1520353145%26oauth_token%3D229849013-kyAkPe0d26SADOegxdb9JgyeKLAkC4fK16ESrMJK%26oauth_version%3D1.0%26track%3Dkubernetes
+DEBUG:oauthlib.oauth1.rfc5849:Signature: HqJClYWQdmsdmrMfwEkChPTJ6kQ=
+DEBUG:requests_oauthlib.oauth1_auth:Updated url: https://stream.twitter.com/1.1/statuses/filter.json?delimited=length
+DEBUG:requests_oauthlib.oauth1_auth:Updated headers: {'Content-Length': '16', 'Content-Type': 'application/x-www-form-urlencoded', 'Authorization': 'OAuth oauth_nonce="68554105759321997921520353145", oauth_timestamp="1520353145", oauth_version="1.0", oauth_signature_method="HMAC-SHA1", oauth_consumer_key="xHuVf9fBEjb1Bu4B8NkiMCUEM", oauth_token="229849013-kyAkPe0d26SADOegxdb9JgyeKLAkC4fK16ESrMJK", oauth_signature="HqJClYWQdmsdmrMfwEkChPTJ6kQ%3D"'}
+DEBUG:requests_oauthlib.oauth1_auth:Updated body: 'track=kubernetes'
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): stream.twitter.com
+DEBUG:urllib3.connectionpool:https://stream.twitter.com:443 "POST /1.1/statuses/filter.json?delimited=length HTTP/1.1" 200 None
+DEBUG:root:Cluster name : global.mapr.com
+INFO:maprdb.connection:Starting JVM
+DEBUG:requests_oauthlib.oauth1_auth:Signing request <PreparedRequest [POST]> using client <Client resource_owner_key=229849013-kyAkPe0d26SADOegxdb9JgyeKLAkC4fK16ESrMJK, callback_uri=None, resource_owner_secret=****, signature_type=AUTH_HEADER, realm=None, client_secret=****, timestamp=None, nonce=None, decoding=None, client_key=xHuVf9fBEjb1Bu4B8NkiMCUEM, encoding=utf-8, signature_method=HMAC-SHA1, verifier=None, rsa_key=None>
+DEBUG:requests_oauthlib.oauth1_auth:Including body in call to sign: True
+DEBUG:oauthlib.oauth1.rfc5849:Collected params: [('delimited', 'length'), ('oauth_version', '1.0'), ('oauth_signature_method', 'HMAC-SHA1'), ('oauth_nonce', '125315559183553743041520353415'), ('oauth_timestamp', '1520353415'), ('oauth_token', '229849013-kyAkPe0d26SADOegxdb9JgyeKLAkC4fK16ESrMJK'), ('oauth_consumer_key', 'xHuVf9fBEjb1Bu4B8NkiMCUEM'), ('track', 'kubernetes')]
+DEBUG:oauthlib.oauth1.rfc5849:Normalized params: delimited=length&oauth_consumer_key=xHuVf9fBEjb1Bu4B8NkiMCUEM&oauth_nonce=125315559183553743041520353415&oauth_signature_method=HMAC-SHA1&oauth_timestamp=1520353415&oauth_token=229849013-kyAkPe0d26SADOegxdb9JgyeKLAkC4fK16ESrMJK&oauth_version=1.0&track=kubernetes
+DEBUG:oauthlib.oauth1.rfc5849:Normalized URI: https://stream.twitter.com/1.1/statuses/filter.json
+DEBUG:oauthlib.oauth1.rfc5849:Signing: signature base string: POST&https%3A%2F%2Fstream.twitter.com%2F1.1%2Fstatuses%2Ffilter.json&delimited%3Dlength%26oauth_consumer_key%3DxHuVf9fBEjb1Bu4B8NkiMCUEM%26oauth_nonce%3D125315559183553743041520353415%26oauth_signature_method%3DHMAC-SHA1%26oauth_timestamp%3D1520353415%26oauth_token%3D229849013-kyAkPe0d26SADOegxdb9JgyeKLAkC4fK16ESrMJK%26oauth_version%3D1.0%26track%3Dkubernetes
+DEBUG:oauthlib.oauth1.rfc5849:Signature: uQlyMjS09rBZcIKprbTcPGxJV1c=
+DEBUG:requests_oauthlib.oauth1_auth:Updated url: https://stream.twitter.com/1.1/statuses/filter.json?delimited=length
+DEBUG:requests_oauthlib.oauth1_auth:Updated headers: {'Content-Type': 'application/x-www-form-urlencoded', 'Content-Length': '16', 'Authorization': 'OAuth oauth_nonce="125315559183553743041520353415", oauth_timestamp="1520353415", oauth_version="1.0", oauth_signature_method="HMAC-SHA1", oauth_consumer_key="xHuVf9fBEjb1Bu4B8NkiMCUEM", oauth_token="229849013-kyAkPe0d26SADOegxdb9JgyeKLAkC4fK16ESrMJK", oauth_signature="uQlyMjS09rBZcIKprbTcPGxJV1c%3D"'}
+DEBUG:requests_oauthlib.oauth1_auth:Updated body: 'track=kubernetes'
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): stream.twitter.com
+DEBUG:urllib3.connectionpool:https://stream.twitter.com:443 "POST /1.1/statuses/filter.json?delimited=length HTTP/1.1" 200 None
